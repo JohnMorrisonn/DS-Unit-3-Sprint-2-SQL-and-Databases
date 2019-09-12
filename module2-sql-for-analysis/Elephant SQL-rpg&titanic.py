@@ -11,15 +11,18 @@ get_ipython().system('pip install psycopg2-binary')
 
 
 import psycopg2
-
+import os
 
 # In[3]:
 
+from dotenv import load_dotenv, find_dotenv
 
-dbname = 	'hyedsfxe'
-user = 'hyedsfxe'
-password = '3CdFl7vAlbx01qmtqooPaWJn1t_ZaQF6'
-host = 'salt.db.elephantsql.com'
+load_dotenv(find_dotenv())
+
+dbname = os.environ.get('dbname')
+user = os.environ.get('user')
+password = os.environ.get('password')
+host = os.environ.get('host')
 
 
 # In[61]:
