@@ -134,6 +134,24 @@ interview screening questions (a form you fill when applying for a job):
   what is a situation where it is not appropriate?
 - What is "NewSQL", and what is it trying to achieve?
 
+#### Part 4 ANSWERS:
+
+- Part4.1 ANSWER: The tables are not directly linked but linked
+  through an intermediary table 'Employee Territory'.
+  The relationship though is ONE to MANY as it is
+  how many territories per employee.
+- Part4.2 ANSWER: MongoDB is used when files/documents
+  are unstructured such as lacking proper rows and columns(dictionaries)
+  or is organized in a different manner such as graphs or images.
+  Mongo is not best when the files are in a structured table layout and/or
+  simply do not need to be scaled.
+- Part4.3 ANSWER: NewSQL is trying to go a step above NoSQL and
+  keep ACID guarantees. ACID is Atomicity, Consistency, Isolation, and
+  Durability; key concepts that database transactions need to keep in
+  the event of an error/malfunction. It is not practical for NoSQL to
+  have these guarantees due to its flexibility.
+
+
 ### Part 5 - Turn it in!
 Add all the files you wrote (`demo_data.py`, `northwind.py`), as well as this
 file with your answers to part 4, to your weekly repo

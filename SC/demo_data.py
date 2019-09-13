@@ -5,11 +5,14 @@ import sqlite3
 conn = sqlite3.connect('demo_data.sqlite3')
 curs = conn.cursor()
 
-# Remove table if already created
+# Remove table if already created as to not create and
+# insert data multiple times
 curs.execute("DROP TABLE demo")
 
+# Data from the table given in markdown
 data = [('g', 3, 9), ('v', 5, 7), ('f', 8, 7)]
 
+# Command to Creat table demo
 create_demo_table = """
   CREATE TABLE demo (
     s TEXT,
@@ -20,6 +23,7 @@ create_demo_table = """
 
 curs.execute(create_demo_table)
 
+# Insert data from data list above into table
 for d in data:
     insert_data = """
         INSERT INTO demo
@@ -30,10 +34,15 @@ conn.commit()
 
 
 def get_query(query, info_str, curs):
+    """
+    Execute and display queries
+    Add a comment as to what the query is
+    Add a line after
+    """
     curs.execute(query)
-    print(info_str, curs.fetchall())
+    print(info_str, curs.fetchall(), '\n')
 
-# Query for how many rows
+# Query for how many rows in the table
 
 query = "SELECT COUNT(*) FROM demo"
 get_query(query, 'How many rows in demo table?', curs)
