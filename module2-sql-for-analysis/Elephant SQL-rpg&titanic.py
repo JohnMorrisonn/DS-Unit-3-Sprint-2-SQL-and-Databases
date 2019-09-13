@@ -4,7 +4,7 @@
 # In[1]:
 
 
-get_ipython().system('pip install psycopg2-binary')
+
 
 
 # In[2]:
@@ -40,13 +40,12 @@ pg_curs = pg_conn.cursor()
 # In[6]:
 
 
-get_ipython().system('pip install wget')
-
 
 # In[7]:
 
 
 import wget
+
 wget.download('https://github.com/LambdaSchool/DS-Unit-3-Sprint-2-SQL-and-Databases/blob/master/module1-introduction-to-sql/rpg_db.sqlite3?raw=true')
 
 
