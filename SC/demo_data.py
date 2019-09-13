@@ -8,7 +8,7 @@ curs = conn.cursor()
 # Remove table if already created
 curs.execute("DROP TABLE demo")
 
-data = [('g', 3, 9), ('v', 5, 7), ('f', 8 ,7)]
+data = [('g', 3, 9), ('v', 5, 7), ('f', 8, 7)]
 
 create_demo_table = """
   CREATE TABLE demo (
@@ -27,6 +27,7 @@ for d in data:
     curs.execute(insert_data)
 
 conn.commit()
+
 
 def get_query(query, info_str, curs):
     curs.execute(query)
